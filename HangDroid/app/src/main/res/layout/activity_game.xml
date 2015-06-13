@@ -1,0 +1,253 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+
+
+    tools:context="com.example.mushahid.hangdroid.GameActivity"
+    android:background="#ffffffff"
+    android:clickable="false">
+
+    <ImageView
+        android:layout_width="400dp"
+        android:layout_height="250dp"
+        android:id="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="55dp"
+        android:maxHeight="250dp"
+        android:src="@drawable/hangdroid_0"
+        android:background="#ffffffff"
+        android:layout_alignRight="@+id/LayoutAddLetter"
+        android:layout_alignEnd="@+id/LayoutAddLetter"
+        android:layout_alignLeft="@+id/triesLeft"
+        android:layout_alignStart="@+id/triesLeft"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="10dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:weightSum="1"
+        android:layout_marginRight="10dp"
+        android:id="@+id/LayoutAddLetter"
+        android:layout_alignParentStart="true">
+
+        <NumberPicker
+
+            android:layout_width="59dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/letterPicker"
+            android:orientation="vertical"
+            android:layout_marginTop="36dp"
+            android:layout_marginRight="10dp" />
+
+        <Button
+            android:textSize="17dp"
+            android:textColor="#ffffffff"
+            android:layout_width="177dp"
+            android:layout_height="71dp"
+            android:text="Check Letter"
+            android:id="@+id/button4"
+            android:background="#2ECC40"
+            android:layout_weight="0.47"
+            android:layout_marginRight="0dp"
+            android:onClick="introduceLetter"
+            android:maxWidth="177dp"
+            android:layout_marginTop="90dp"
+            android:layout_marginLeft="25dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/LayoutAddLetter"
+        android:layout_marginBottom="-70dp"
+        android:id="@+id/LayoutLetters"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="145dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="_"
+            android:id="@+id/textView5"
+            android:layout_marginLeft="5dp"
+            android:textSize="20dp"
+            android:textColor="#ff080808" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="_"
+            android:id="@+id/textView4"
+            android:layout_marginLeft="5dp"
+            android:textSize="20dp"
+            android:textColor="#ff080808" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="_"
+            android:id="@+id/textView6"
+            android:layout_marginLeft="5dp"
+            android:textSize="20dp"
+            android:textColor="#ff080808" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="_"
+            android:id="@+id/textView7"
+            android:layout_marginLeft="5dp"
+            android:textSize="20dp"
+            android:textColor="#ff080808" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="_"
+            android:id="@+id/textView12"
+            android:layout_marginLeft="5dp"
+            android:textSize="20dp"
+            android:textColor="#ff080808" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="invisible"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/youWin"
+        android:background="#ffffffff"
+        android:weightSum="1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="YOU WIN!!!"
+            android:id="@+id/textView10"
+            android:textSize="60dp"
+            android:layout_alignTop="@+id/imageView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:textColor="#FFDC00"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="-80dp"
+            android:layout_marginRight="20dp" />
+
+        <Button
+            android:layout_width="125dp"
+            android:layout_height="50dp"
+            android:text="Continue"
+            android:id="@+id/button8"
+            android:layout_marginLeft="-10dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="120dp"
+            android:layout_weight="0.09"
+            android:layout_marginBottom="-10dp"
+            android:textColor="#ffffff"
+            android:textSize="17dp"
+            android:background="#2ECC40"
+            android:onClick="continuefcn" />
+
+        <Button
+            android:layout_width="125dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="-10dp"
+            android:text="Main Menu"
+            android:id="@+id/button9"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_weight="0.07"
+            android:layout_marginBottom="10dp"
+            android:background="#F012BE"
+            android:textColor="#ffffff"
+            android:textSize="17dp"
+            android:onClick="mainMenu" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Total Score: "
+            android:id="@+id/textView11"
+            android:layout_marginTop="30dp"
+            android:textSize="50dp"
+            android:textColor="#FF4136"
+            android:layout_marginLeft="0dp" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="SCORE: 0"
+        android:id="@+id/score"
+        android:textColor="#ff040404"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/imageView"
+        android:layout_alignEnd="@+id/imageView"
+        android:layout_marginTop="15dp"
+        android:textSize="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/failedtext"
+        android:textColor="#ffff0900"
+        android:textSize="17dp"
+        android:text=" Wrong Letters: "
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/triesLeft"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:autoText="false"
+        android:layout_marginRight="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text=" Tries Left: 6"
+        android:id="@+id/triesLeft"
+        android:textSize="17dp"
+        android:textColor="#ff0420ff"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="-40dp"
+        android:layout_alignRight="@+id/failedtext"
+        android:layout_alignEnd="@+id/failedtext"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="-10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="HINT: "
+        android:id="@+id/hintSinglePlayer"
+        android:textColor="#ffff860f"
+        android:layout_marginTop="15dp"
+        android:textSize="15dp" />
+
+</RelativeLayout>
